@@ -46,7 +46,7 @@ def text_to_speech(text, voice=""):
 
     # Send a HTTP Post request to Watson Text-to-Speech Service
     response = requests.post(api_url, headers=headers, json=json_data)
-    print('text to speech response:', response)
+    #print('text to speech response:', response)
     return response.content
     
 
@@ -62,7 +62,7 @@ def openai_process_message(user_message):
         ],
         max_tokens=4000
     )
-    print("openai response:", openai_response)
+    #print("openai response:", openai_response)
     # Parse the response to get the response message for our prompt
     response_text = openai_response.choices[0].message.content
     return response_text

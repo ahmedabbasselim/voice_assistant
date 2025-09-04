@@ -34,10 +34,10 @@ def speech_to_text_route():
 @app.route('/process-message', methods=['POST'])
 def process_message_route():
     user_message = request.json['userMessage'] # Get user's message from their request
-    print('user_message', user_message)
+    #print('user_message', user_message)
 
     voice = request.json['voice'] # Get user's preferred voice from their request
-    print('voice', voice)
+    #print('voice', voice)
 
     # Call openai_process_message function to process the user's message and get a response back
     openai_response_text = openai_process_message(user_message)
@@ -58,7 +58,7 @@ def process_message_route():
         mimetype='application/json'
     )
 
-    print(response)
+    #print(response)
     return response
 
 
